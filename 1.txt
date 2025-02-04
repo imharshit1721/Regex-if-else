@@ -1,0 +1,38 @@
+//Write a C++ function that takes an integer as an argument and uses an if-else statement to determine whether the number is prime or not, then returns the result.
+
+
+
+#include<iostream>
+using namespace std;
+
+bool is_prime(int n){
+    int  i = 2;
+    bool flag = true;
+    while(i < n){
+        if(n % i != 0){
+            i = i+1;
+            continue;
+        }
+        else{
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+
+int main(){
+    
+   int n;
+   cout<<"enter a number"<<endl;
+   cin>>n;
+   if(is_prime(n)){
+       cout<<"it is prime number"<<endl;
+   }
+   else{
+       cout<<"it is not prime number"<<endl;
+   }
+   
+   
+   
+}

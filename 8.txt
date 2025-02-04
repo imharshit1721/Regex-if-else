@@ -1,0 +1,52 @@
+//Write a C++ function that takes a person's weight and height as arguments and returns their Body Mass Index (BMI) category (Underweight, Normal weight, Overweight, Obese) using if-else statements.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+string BMI(float weight  , float height)
+{
+      string BMI_;
+      float mass = (weight)/(height * height);
+      if(mass < 18.5 ){
+          BMI_ = "under weight";
+      }
+      else if(mass >= 18.5 && mass <= 24.9 ){
+          BMI_ = "Healthy weight ";
+      }
+      
+      else if(mass >= 25.0 && mass <= 29.9){
+          BMI_ = "over weight";
+      }
+      else if(mass >= 30 && mass < 35){
+          BMI_ = "obesity";
+      }
+      
+      else if(mass >= 35 && mass <= 40){
+          BMI_ = "class obesity1";
+      }
+      
+      else if(mass >= 40){
+          BMI_ = "class obesity2";
+      }
+      
+      cout<<mass;
+      return BMI_;
+}
+
+int main(){
+    
+    float weight;
+    float height;
+    
+    
+    cout<<"enter weight in  kg"<<endl;
+    cin>>weight;
+    
+    cout<<"enter height in cm"<<endl;
+    cin>>height;
+    
+    height = height/100;
+    
+    
+    cout<<BMI(weight  ,height);
+}

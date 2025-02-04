@@ -1,0 +1,29 @@
+//Create a C++ program that takes a floating-point number as input and prints whether it is positive, negative, or zero using if-else statements (without return, with argument).
+
+
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+string nums(float number){
+    string num;
+    if(number > 0 ){
+        num = "positive";
+    }
+    else if(number < 0){
+        num = "negative";
+    }
+    else if(number == 0){
+        num = "zero";
+    }
+    return num;
+}
+
+int main(){
+    
+    float number;
+    cout<<"Enter a number"<<endl;
+    cin>>number;
+    
+    cout<<"IT IS "<<nums(number);
+}

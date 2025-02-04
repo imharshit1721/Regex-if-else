@@ -1,0 +1,34 @@
+//Write a C++ function that takes a person's hourly wage and hours worked as arguments and returns their total pay, including overtime pay for hours worked over 40, using if-else statements.
+
+#include<iostream>
+using namespace std;
+
+float pay(float wage , int hours){
+    float payment;
+    if(hours <= 40){
+        payment = wage *  hours;
+    }
+    else if(hours > 40){
+        int overtime = hours - 40;
+       // int hour = hours - overtime;
+        payment = 40 * wage + overtime *  wage  + overtime * 250;
+    }
+    
+    return payment;
+}
+
+int main(){
+    
+    float wage;
+    int hours;
+    
+    
+    cout<<"ENter the wage and hours"<<endl;
+    cin>>wage>>hours;
+    
+    float salary = pay(wage , hours);
+    
+    cout<<"the salary is "<<salary;
+}
+
+

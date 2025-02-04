@@ -1,0 +1,47 @@
+//Write a C++ function that takes a month as an argument and returns whether it has 30 days, 31 days, or 28/29 days using if-else statements.
+
+
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int days_in_month(string month){
+    int days;
+    if(month == "Febuary"){
+        days = 29;
+    }
+    else if(month == "Aprail" || month == "June" || month == "September" || month == "November"){
+        days  = 30;
+    }
+    
+    else if(month == "January" || month == "March" || month == "May"|| month == "July" || month == "August" || month == "october" || month == "December"){
+        days = 31;
+    }
+    
+    return days;
+}
+
+
+int main(){
+    
+    string month;
+    cout<<"January , Febuary , March ,Aprail \n"
+         <<"May , June  ,July  ,August ,September , October ,November , December";
+    cout<<"\n";     
+    
+    cout<<"enter a month"<<endl;
+    cin>>month;
+    cout<<"The number of day in "<<month<<" are :\n";
+    
+    int days = days_in_month(month); 
+    
+    if(days == 29 || days == 30 || days == 31){
+        cout<<days<<" ";
+    }
+    else{
+        cout<<"invalid month\n";
+    }
+    
+    
+}
+

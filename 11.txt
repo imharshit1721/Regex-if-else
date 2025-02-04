@@ -1,0 +1,31 @@
+//Develop a C++ function that takes a character as an argument and returns its ASCII value category (digit, uppercase letter, lowercase letter, special character) using if-else statements.
+
+
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int ASCII1(char c){
+    
+    
+    return int(c);
+}
+
+bool is_char(char a){
+    
+    return a;
+}
+int main(){
+    
+    char c;
+    cout<<"enter a char";
+    cin>>c;
+    if(is_char(c)){
+         cout<<ASCII1(c);        
+    }
+    
+    else{
+        cout<<"it is not a character";
+    }
+}
+

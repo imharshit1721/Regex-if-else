@@ -1,0 +1,28 @@
+//Write a C++ function that takes two numbers as arguments and returns whether they are equal, or which one is larger using if-else statements and relational operators.
+#include<bits/stdc++.h>
+using namespace std;
+
+string larger_equal(int num1 , int num2){
+      string large;
+      if(num1 > num2){
+          large = "num1 is larger";
+      }
+      else if(num2 < num1){
+          large = "num2 is larger";
+      }
+      else if(num1 == num2){
+          large = "num1 and num2 are equal";
+      }
+      return large;
+}
+
+int main(){
+    
+    int num1 , num2;
+    cout<<"Enter a number 1"<<"\n";
+    cin>>num1;
+    cout<<"Enter a number 2"<<"\n";
+    cin>>num2;
+    
+    cout<<larger_equal(num1 , num2);
+}

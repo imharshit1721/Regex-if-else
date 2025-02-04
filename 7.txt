@@ -1,0 +1,39 @@
+//Create a C++ function that takes a character as an argument and returns whether it is an uppercase letter or not using if-else statements.
+
+
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+string uppercase_lower(char alphabet){
+    string alpha;
+    if(alphabet >= 'a' && alphabet <= 'z'){
+        alpha = "lowercase";
+    }
+    else if(alphabet >= 'A' && alphabet <= 'Z'){
+        alpha = "uppercase";
+    }
+    else {
+        alpha = "digit";
+    }
+    
+    return alpha;
+}
+
+int main(){
+    char alphabet;
+    
+    cout<<"enter a alphabet"<<endl;
+    cin>>alphabet;
+    
+    if(uppercase_lower(alphabet) == "uppercase"){
+            cout<<"if is "<<uppercase_lower(alphabet);
+    }
+    else if(uppercase_lower(alphabet) == "lowercase"){
+        cout<<"it is "<<uppercase_lower(alphabet);
+    }
+    else if(uppercase_lower(alphabet) == "digit"){
+        cout<<"it is not alphabet it is"<<uppercase_lower(alphabet);
+    }
+    
+}
